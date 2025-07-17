@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #b3e5fc, #81d4fa);
+  color: #004d40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.tela {
+  display: none;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.tela.ativa {
+  display: block;
+}
+
+h1, h2 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+input {
+  padding: 10px;
+  width: 80%;
+  margin-top: 20px;
+  font-size: 16px;
+  border: 2px solid #0097a7;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+#contador, #contadorInicial {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+#botaoAperto {
+  font-size: 24px;
+  padding: 20px 40px;
+  background-color: #0097a7;
+}
+
+ol {
+  text-align: left;
+  padding-left: 20px;
+}
+
+@media (max-width: 600px) {
+  .tela {
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Desafio Energia Eólica</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Tela de entrada -->
+  <section id="tela-nome" class="tela ativa">
+    <div class="conteudo">
+      <h1>Desafio da Energia Eólica</h1>
+      <input type="text" id="nome" placeholder="Digite seu nome..." />
+      <button id="btnComecar">Começar</button>
+      <button id="btnVerRanking">Ver Ranking</button>
+    </div>
+  </section>
+
+  <!-- Tela de contagem regressiva -->
+  <section id="tela-contagem" class="tela">
+    <div class="conteudo">
+      <h2>Prepare-se, <span id="nomeJogadorContagem"></span>!</h2>
+      <div id="contadorInicial">3</div>
+    </div>
+  </section>
+
+  <!-- Tela do jogo -->
+  <section id="tela-jogo" class="tela">
+    <div class="conteudo">
+      <h2>Vai, <span id="nomeJogador"></span>!</h2>
+      <div id="contador">15</div>
+      <button id="botaoAperto">Clique aqui!</button>
+      <p>Total de Cliques: <span id="cliques">0</span></p>
+    </div>
+  </section>
+
+  <!-- Tela de ranking -->
+  <section id="tela-ranking" class="tela">
+    <div class="conteudo">
+      <h2>🏆 Ranking dos Ventos 🏆</h2>
+      <ol id="tabelaRanking"></ol>
+      <button id="btnJogarNovamente">Jogar Novamente</button>
+      <button id="btnVoltarInicio">Voltar ao Início</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
