@@ -5,6 +5,9 @@ let tempo = 15;
 let intervalo;
 let contagemInicial = 3;
 
+let velocidade = 0;
+let rotacao = 0;
+
 function mostrarTela(id) {
   document.querySelectorAll('.tela').forEach(tela => tela.classList.remove('ativa'));
   document.getElementById(id).classList.add('ativa');
@@ -59,6 +62,9 @@ function iniciarContagem() {
 function iniciarJogo() {
   cliques = 0;
   tempo = 15;
+  velocidade = 0;
+  rotacao = 0;
+
   document.getElementById("cliques").textContent = cliques;
   document.getElementById("contador").textContent = tempo;
   document.getElementById("nomeJogador").textContent = nomeFormatado;
@@ -69,11 +75,29 @@ function iniciarJogo() {
     document.getElementById("contador").textContent = tempo;
     if (tempo === 0) finalizarJogo();
   }, 1000);
+
+  animarMoinho();
 }
 
 function contarClique() {
   cliques++;
   document.getElementById("cliques").textContent = cliques;
+  velocidade += 2;
+}
+
+function animarMoinho() {
+  const helices = document.getElementById("helices");
+
+  function girar() {
+    rotacao += velocidade;
+    helices.setAttribute("transform", `rotate(${rotacao}, 100, 40)`);
+    velocidade *= 0.98;
+    if (tempo > 0 || velocidade > 0.1) {
+      requestAnimationFrame(girar);
+    }
+  }
+
+  requestAnimationFrame(girar);
 }
 
 function finalizarJogo() {

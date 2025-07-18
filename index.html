@@ -32,6 +32,37 @@
     <div class="conteudo">
       <h2>Vai, <span id="nomeJogador"></span>!</h2>
       <div id="contador">15</div>
+
+      <div class="moinho-container">
+        <!-- Moinho estilo eólico realista -->
+        <svg id="moinho" width="300" height="300" viewBox="0 0 200 200">
+          <!-- Base -->
+          <rect x="95" y="100" width="10" height="80" fill="#7607a1" />
+
+          <!-- Torre -->
+          <line x1="100" y1="100" x2="100" y2="40" stroke="#333" stroke-width="4" />
+
+          <!-- Centro do rotor -->
+          <circle cx="100" cy="40" r="6" fill="#222" stroke="222" stroke-width="1" />
+
+          <!-- Hélices -->
+<g id="helices">
+  <!-- Hélice superior (grossa e longa) -->
+  <path d="M98,40 Q100,5 110,0 Q102,5 98,40 Z" fill="#7607a1" stroke="#000" stroke-width="1"/>
+
+  <!-- Hélice direita (grossa e longa) -->
+  <path d="M100,42 Q140,50 145,60 Q135,52 100,42 Z" fill="#7607a1" stroke="#000" stroke-width="1"/>
+
+  <!-- Hélice esquerda (grossa e longa) -->
+  <path d="M100,42 Q60,50 55,60 Q65,52 100,42 Z" fill="#7607a1" stroke="#000" stroke-width="1"/>
+</g>
+
+
+
+
+        </svg>
+      </div>
+
       <button id="botaoAperto">Clique aqui!</button>
       <p>Total de Cliques: <span id="cliques">0</span></p>
     </div>

@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to right, #b3e5fc, #81d4fa);
-  color: #004d40;
+  background-color: #000000bd;
+  color: #7607a1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@ body {
   max-width: 500px;
   padding: 40px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -33,7 +33,7 @@ input {
   width: 80%;
   margin-top: 20px;
   font-size: 16px;
-  border: 2px solid #0097a7;
+  border: 2px solid #7607a1;
   border-radius: 5px;
 }
 
@@ -41,7 +41,7 @@ button {
   margin-top: 20px;
   padding: 12px 24px;
   font-size: 16px;
-  background-color: #00796b;
+  background-color: #7607a1;
   color: white;
   border: none;
   border-radius: 8px;
@@ -50,7 +50,7 @@ button {
 }
 
 button:hover {
-  background-color: #004d40;
+  background-color: #3b004d;
 }
 
 #contador, #contadorInicial {
@@ -68,6 +68,18 @@ button:hover {
 ol {
   text-align: left;
   padding-left: 20px;
+}
+
+.moinho-container {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moinho-container svg {
+  width: 250px;
+  height: auto;
 }
 
 @media (max-width: 600px) {
